@@ -1,0 +1,11 @@
+[Unit]
+Description=nmcli monitor logging
+After=default.target
+
+[Service]
+Type=simple
+
+ExecStart=find %u/Downloads/* -mtime +29 -type f,d -delete
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Git Notes
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStart=%h/go/bin/git-notes %h/.config/git-notes/git-notes.json
+
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target
