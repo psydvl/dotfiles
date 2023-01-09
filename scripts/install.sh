@@ -21,11 +21,9 @@ sudo zypper in git httpie cmake-full
 
 USERNAME="psydvl"
 URL="https://github.com/${USERNAME}/dotfiles"
-git clone --mirror $URL ~/.cfg
-git --git-dir="$HOME/.cfg/" --work-tree="$HOME" pull --ff-only
-git --git-dir="$HOME/.cfg/" --work-tree="$HOME" submodule update --init
-
-mkdir -p ~/work/Projects/Playground
+git clone --mirror $URL ~/.dotfiles
+git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" pull --ff-only
+git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" submodule update --init
 
 sudo zypper install go yarn flatpak tcl tk
 sudo zypper install htop sysprof sysprof-ui wl-clipboard
